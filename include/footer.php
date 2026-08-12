@@ -38,11 +38,15 @@
                     </li>
                     <li class="phones">
                         <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <span>Pankaj: 91675 32223</span><br>
-                            <span>Abhishek: 94086 46667</span><br>
-                            <span>Ajay: 91674 79626</span>
-                        </div>
+                        <div><span>+91 91675 32223</span></div>
+                    </li>
+                    <li class="phones">
+                        <i class="fa-solid fa-phone"></i>
+                        <div><span>+91 94086 46667</span></div>
+                    </li>
+                    <li class="phones">
+                        <i class="fa-solid fa-phone"></i>
+                        <div><span>+91 91674 79626</span></div>
                     </li>
                 </ul>
             </div>

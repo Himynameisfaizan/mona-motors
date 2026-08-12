@@ -222,7 +222,7 @@ ul {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 80%;
+    max-width: 90%;
 }
 
 .hero-content h1 {
@@ -837,6 +837,166 @@ ul {
    Responsive Fixes (Updated for Perfect Mobile View)
 ========================================= */
 
+/* =========================================
+   Mobile Menu Button & Overlay (Base)
+========================================= */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--primary-red);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.mobile-menu-close {
+    display: none;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    backdrop-filter: blur(3px);
+}
+
+/* =========================================
+   Responsive Design for Header
+========================================= */
+@media (max-width: 992px) {
+    /* Hide desktop CTA button to make space for mobile logo and hamburger */
+    .header-action .desktop-btn {
+        display: none; 
+    }
+    
+    /* Show Hamburger Menu */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Sidebar Navigation Style */
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Hidden by default off-screen */
+        width: 280px;
+        height: 100vh;
+        background: var(--bg-main);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 80px 20px 30px;
+        transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    /* Active Class for slide-in */
+    .navbar.active {
+        right: 0;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    /* Close Button Styling */
+    .mobile-menu-close {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 28px;
+        color: var(--text-dark);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .mobile-menu-close:hover {
+        color: var(--primary-red);
+        transform: rotate(90deg);
+    }
+
+    /* Mobile Links Styling */
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links li a {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        font-size: 16px;
+        color: var(--text-dark);
+    }
+
+    .nav-links li a.active {
+        color: var(--primary-red);
+    }
+    
+    .nav-links li a::after {
+        display: none; /* Hide hover underline for mobile */
+    }
+
+    /* Mobile Dropdown adjustment */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-top: 1px dashed var(--border-color);
+        background: var(--bg-secondary);
+        display: none; /* Use JS for toggle or keep visible on hover */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 12px 15px;
+        font-size: 14px;
+        border-bottom: none;
+    }
+
+    /* Mobile Links Styling Fix */
+    .nav-links {
+        display: flex !important; /* Yeh line old display:none ko override karegi */
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        display: block; /* Ensures list items take full width */
+    }
+
+    .nav-links li a {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px; /* Thodi padding badha di taaki touch karne mein aasan ho */
+        font-size: 16px;
+        color: var(--text-dark);
+    }
+}
+
 /* For Tablets and Smaller Desktop Screens */
 @media (max-width: 992px) {
     .features-section {
@@ -863,6 +1023,10 @@ ul {
         width: 100%; 
         max-width: 100%; 
     }
+
+    .hero-section {
+    padding: 40px 0px;
+}
 }
 
 /* For Mobile Phones */
@@ -874,7 +1038,7 @@ ul {
     /* Hero Section Fixes */
     .hero-section {
         height: auto;
-        padding: 120px 20px 80px;
+        padding: 20px 0px !important;
         background-position: center 30%; /* Focus on the actual car parts in the image */
     }
     .hero-content h1 { 

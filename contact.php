@@ -40,9 +40,9 @@ include("include/breadcrumb.php");
                     <div class="icon"><i class="fa-solid fa-phone"></i></div>
                     <div class="details">
                         <h4>Call Us</h4>
-                        <p><strong>Pankaj:</strong> +91 91675 32223</p>
-                        <p><strong>Abhishek:</strong> +91 94086 46667</p>
-                        <p><strong>Ajay:</strong> +91 91674 79626</p>
+                        <p>+91 91675 32223</p>
+                        <p>+91 94086 46667</p>
+                        <p>+91 91674 79626</p>
                     </div>
                 </div>
             </div>
