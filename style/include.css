@@ -1,0 +1,86 @@
+/* =========================================
+   Breadcrumb Section
+========================================= */
+.breadcrumb-section {
+    position: relative;
+    height: 350px; /* Thoda chota height hero section se */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-red);
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Dark gradient overlay taaki white text perfectly read ho sake */
+    background: linear-gradient(to right, rgba(15, 15, 15, 0.92), rgba(15, 15, 15, 0.8));
+    z-index: 1;
+}
+
+.breadcrumb-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-content .page-title {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.breadcrumb-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.breadcrumb-item a {
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb-item a:hover {
+    color: #ffffff;
+}
+
+.breadcrumb-item.separator {
+    color: var(--primary-red);
+    font-size: 14px;
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-red);
+}
+
+/* Responsive for Breadcrumb */
+@media (max-width: 768px) {
+    .breadcrumb-section {
+        height: 250px;
+    }
+    .breadcrumb-content .page-title {
+        font-size: 32px;
+    }
+    .breadcrumb-item {
+        font-size: 14px;
+    }
+    .breadcrumb-list {
+        gap: 10px;
+    }
+}
