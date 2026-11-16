@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteBase /projects/vtexport/
+
+# 1. PEHLE SABHI ASSETS KO REWRITE HONE SE ROKO (CSS FIX YAHI SE HOGA)
+# Agar koi file (CSS, JS, Image) exist karti hai, toh usko uske original path se hi do
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2. DYNAMIC CLEAN URL REWRITES (Ab ye sahi se kaam karenge aur Assets ko nahi chedenge)
+# Product Details
+RewriteRule ^product/([a-zA-Z0-9-]+)/?$ product-details.php?slug=$1 [L,QSA]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Blog Details
+RewriteRule ^blog/([a-zA-Z0-9-]+)/?$ blog-details.php?slug=$1 [L,QSA]
+
+# Service Details
+RewriteRule ^service/([a-zA-Z0-9-]+)/?$ service-details.php?slug=$1 [L,QSA]
+
+# Category & Sub-Category
+RewriteRule ^category/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ category.php?slug=$1&sub=$2 [L,QSA]
+RewriteRule ^category/([a-zA-Z0-9-]+)/?$ category.php?slug=$1 [L,QSA]
+
+# 3. .PHP EXTENSION HIDE KARNE KA LOGIC (Ise niche rakhna zaroori hai)
+# Taaki about, contact wagera bina .php ke open ho sakein
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+
+# 4. ERROR PAGE HANDLING
+ErrorDocument 404 /projects/vtexport/404.php
