@@ -86,13 +86,13 @@ $check = mysqli_query($conn,$sql);
                                                             </div>
 
                                                             <!-- Brand Name -->
-                                                            <div class="col-md-6 mb-3">
+                                                            <!-- <div class="col-md-6 mb-3">
                                                                 <label class="form-label" for="brand_name">Brand
                                                                     Name</label>
                                                                 <input type="text" class="form-control"
                                                                     name="brand_name" id="brand_name"
                                                                     placeholder="Brand name" required />
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- Parent Category Name -->
                                                             <div class="col-md-6 mb-3">
@@ -121,11 +121,11 @@ $check = mysqli_query($conn,$sql);
                                                             </div>
 
                                                             <!-- Stock -->
-                                                            <div class="col-md-6 mb-3">
+                                                            <!-- <div class="col-md-6 mb-3">
                                                                 <label class="form-label" for="stock">Stock</label>
                                                                 <input type="text" class="form-control" name="stock"
                                                                     id="stock" placeholder="Stock" />
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- Product Image (Main) -->
                                                             <div class="col-md-6 mb-3">
@@ -148,7 +148,7 @@ $check = mysqli_query($conn,$sql);
                                                             </div>
 
                                                             <!-- Exclusive Deal -->
-                                                            <div class="col-md-6 mb-3">
+                                                            <!-- <div class="col-md-6 mb-3">
                                                                 <label class="form-label" for="new_arrival">Exclusive
                                                                     Deal & Offers</label>
                                                                 <select id="new_arrival" name="new_arrival"
@@ -156,10 +156,10 @@ $check = mysqli_query($conn,$sql);
                                                                     <option value="0" selected>No</option>
                                                                     <option value="1">Yes</option>
                                                                 </select>
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- Special Offers -->
-                                                            <div class="col-md-6 mb-3">
+                                                            <!-- <div class="col-md-6 mb-3">
                                                                 <label class="form-label" for="trending">Special
                                                                     Offers</label>
                                                                 <select id="trending" name="trending"
@@ -167,7 +167,7 @@ $check = mysqli_query($conn,$sql);
                                                                     <option value="0" selected>No</option>
                                                                     <option value="1">Yes</option>
                                                                 </select>
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- Short Description -->
                                                             <div class="col-md-12 mb-3">
@@ -186,20 +186,20 @@ $check = mysqli_query($conn,$sql);
                                                             </div>
 
                                                             <!-- MRP -->
-                                                            <div class="col-md-6 mb-3">
+                                                            <!-- <div class="col-md-6 mb-3">
                                                                 <label class="form-label" for="mrp">MRP</label>
                                                                 <input type="text" class="form-control" name="mrp"
                                                                     id="mrp" placeholder="MRP" />
-                                                            </div>
+                                                            </div> -->
 
                                                             <!-- Selling Price -->
-                                                            <div class="col-md-6 mb-3">
+                                                            <!-- <div class="col-md-6 mb-3">
                                                                 <label class="form-label" for="selling_price">Selling
                                                                     Price</label>
                                                                 <input type="text" class="form-control"
                                                                     name="selling_price" id="selling_price"
                                                                     placeholder="Selling Price" />
-                                                            </div>
+                                                            </div> -->
                                                         </div>
 
                                                         <!-- SEO SECTION -->

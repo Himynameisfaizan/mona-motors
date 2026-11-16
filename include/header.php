@@ -1,10 +1,6 @@
 <?php 
 // Database Connection (Global for all pages)
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "vtexport"; // Aapka database name
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+include 'config/connect.php';
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
