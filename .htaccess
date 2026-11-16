@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /projects/vtexport/
+RewriteBase /projects/mona-motors/
 
 # 1. PEHLE SABHI ASSETS KO REWRITE HONE SE ROKO (CSS FIX YAHI SE HOGA)
 # Agar koi file (CSS, JS, Image) exist karti hai, toh usko uske original path se hi do
