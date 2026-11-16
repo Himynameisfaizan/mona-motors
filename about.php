@@ -3,12 +3,7 @@ $pageTitle = "About Us";
 include ("include/header.php");
 include ("include/breadcrumb.php"); 
 
-// Database Connection
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "mona_motors"; // Database Name
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+include 'config/connect.php';
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

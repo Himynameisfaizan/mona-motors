@@ -10,7 +10,7 @@ if (!isset($pageTitle)) {
     <div class="breadcrumb-overlay"></div>
     <div class="container breadcrumb-content">
         <h1 class="page-title fade-up"><?php echo htmlspecialchars($pageTitle); ?></h1>
-        
+
         <nav aria-label="breadcrumb" class="fade-up delay-1">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item">
@@ -20,7 +20,7 @@ if (!isset($pageTitle)) {
                     <i class="fa-solid fa-angle-right"></i>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    <?php echo htmlspecialchars($pageTitle); ?>
+                    <?php echo htmlspecialchars_decode($pageTitle); ?>
                 </li>
             </ol>
         </nav>

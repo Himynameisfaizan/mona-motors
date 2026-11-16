@@ -1,12 +1,7 @@
 <?php 
 include 'include/header.php'; 
 
-// Database Connection
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "mona_motors"; // Aapke SQL dump ke anusaar DB name
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+include 'config/connect.php';
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
