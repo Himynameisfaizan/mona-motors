@@ -17,10 +17,10 @@ if ($local) {
     $site = "http://localhost/projects/mona-motors/";
 } else {
     $host = 'localhost';
-    $username = 'u799879276_bhagirath_db';
-    $password = 'Bhagi@rath1';
-    $dbName = 'u799879276_bhagirath_db';
-    $site = 'https://royalblue-gazelle-538620.hostingersite.com/';
+    $username = 'u799879276_mona_motors';
+    $password = 'Mona@motors1';
+    $dbName = 'u799879276_mona_motors';
+    $site = 'https://themonamotors.com/';
 }
 
 // Make `$site` global
