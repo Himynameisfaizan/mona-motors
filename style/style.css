@@ -677,6 +677,25 @@ ul {
     transform: translateY(0);
 }
 
+/* Popup Background Blur Effect */
+.fancybox__backdrop {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    /* For Safari */
+}
+
+/* Force Main Image to be visible (Prevents theme CSS conflicts) */
+.fancybox__image {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+}
+
 /* =========================================
    Testimonials Section
 ========================================= */

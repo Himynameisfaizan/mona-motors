@@ -25,7 +25,7 @@ $banner_bg = !empty($banner['banner_path']) ? $banner['banner_path'] : 'images/s
     <div class="container hero-content">
         <span class="badge fade-up">All Types of Car Spare Parts Stockiest</span>
         <h1 class="fade-up delay-1">
-            <?= !empty($banner['title']) ? htmlspecialchars($banner['title']) : 'Premium Auto <br><span class="text-red">Motor Parts</span>' ?>
+            <?= !empty($banner['title']) ? html_entity_decode($banner['title']) : 'Premium Auto <br><span class="text-red">Motor Parts</span>' ?>
         </h1>
         <p class="fade-up delay-2">
             <?= !empty($banner['description']) ? htmlspecialchars($banner['description']) : 'Specializing in high-performance spare parts, AC compressors, and reliable automotive solutions designed for durability and efficiency.' ?>
@@ -181,8 +181,9 @@ $about = $about_result->fetch_assoc();
         </div>
     </div>
 </section>
-
 <!-- ================= Dynamic Gallery Section ================= -->
+<!-- Fancybox v4 CSS -->
+
 <section class="gallery-section">
     <div class="container">
         <div class="section-title text-center">
@@ -200,10 +201,15 @@ $about = $about_result->fetch_assoc();
                 while($gallery = $gallery_result->fetch_assoc()) {
             ?>
             <div class="gallery-item fade-up delay-<?= $delay ?>">
+                <!-- Website mein dikhne wali image -->
                 <img src="admin/<?= $gallery['image_path'] ?>" alt="<?= htmlspecialchars($gallery['image_name']) ?>">
+
                 <div class="gallery-overlay">
-                    <a href="<?= $gallery['image_path'] ?>" class="zoom-btn"><i
-                            class="fa-solid fa-magnifying-glass-plus"></i></a>
+                    <!-- Popup Trigger (data-type="image" added) -->
+                    <a href="admin/<?= $gallery['image_path'] ?>" data-fancybox="gallery" data-type="image"
+                        data-caption="<?= htmlspecialchars($gallery['image_name']) ?>" class="zoom-btn">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
                 </div>
             </div>
             <?php 
@@ -343,6 +349,24 @@ $about = $about_result->fetch_assoc();
         </div>
     </div>
 </section>
+
+<!-- Fancybox v4 JS -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script>
+Fancybox.bind('[data-fancybox="gallery"]', {
+    Toolbar: {
+        display: [
+            "zoom",
+            "slideShow",
+            "fullscreen",
+            "close",
+        ],
+    },
+    Images: {
+        initialSize: "fit"
+    }
+});
+</script>
 
 <?php 
 $conn->close();

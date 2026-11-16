@@ -4,7 +4,7 @@ $meta_title = "404 - Page Not Found";
 $meta_desc = "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.";
 $meta_key = "404, page not found, VT Export";
 
-include 'includes/header.php'; 
+include 'include/header.php'; 
 ?>
 
 <style>
@@ -124,5 +124,5 @@ include 'includes/header.php';
 </div>
 
 <?php 
-include 'includes/footer.php'; 
+include 'include/footer.php'; 
 ?>
