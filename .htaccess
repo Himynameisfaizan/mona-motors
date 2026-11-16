@@ -29,4 +29,4 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
 
 # 4. ERROR PAGE HANDLING
-ErrorDocument 404 /projects/vtexport/404.php
+ErrorDocument 404 /projects/mona-motors/404.php

@@ -101,7 +101,7 @@ $blog_date = strtotime($blog['created_at']);
                     $recent_result = $conn->query($recent_query);
                     if($recent_result->num_rows > 0) {
                         while($recent = $recent_result->fetch_assoc()) {
-                            $r_img = !empty($recent['image']) ? 'admin/uploads/blogs/'.$recent['image'] : 'images/project/placeholder.jpg';
+                            $r_img = !empty($recent['image']) ? 'admin/assets/img/uploads/blogs/'.$recent['image'] : 'images/project/placeholder.jpg';
                     ?>
                     <div class="recent-post-item"
                         style="display:flex; gap:15px; margin-bottom:15px; align-items:center;">
