@@ -36,17 +36,25 @@ $banner_bg = !empty($banner['banner_path']) ? $banner['banner_path'] : 'images/s
 <!-- ================= Services Quick Snippet ================= -->
 <section class="features-section container">
     <div class="feature-card">
-        <div class="icon"><img src="images/icon/icon-card/v-1/icon-1.png" alt="Auto Electrical"></div>
+        <div class="icon">
+            <i class="fa-solid fa-car-battery" style="font-size: 40px; color: var(--primary-red);"></i>
+        </div>
         <h3>Auto Electrical</h3>
         <p>High-quality switches, sensors, and electrical components for smooth performance.</p>
     </div>
+
     <div class="feature-card feature-active">
-        <div class="icon"><i class="fa-solid fa-fan" style="font-size: 40px; color: var(--primary-red);"></i></div>
+        <div class="icon">
+            <i class="fa-solid fa-fan" style="font-size: 40px; color: var(--primary-red);"></i>
+        </div>
         <h3>Interior Parts</h3>
         <p>Premium AC vents, wiper linkages, and blower motors designed for perfect fit.</p>
     </div>
+
     <div class="feature-card">
-        <div class="icon"><img src="images/icon/icon-card/v-1/icon-2.png" alt="Spare Solutions"></div>
+        <div class="icon">
+            <i class="fa-solid fa-gears" style="font-size: 40px; color: var(--primary-red);"></i>
+        </div>
         <h3>Spare Solutions</h3>
         <p>Durable engine and mechanical components for a wide range of vehicle models.</p>
     </div>

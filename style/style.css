@@ -243,6 +243,11 @@ ul {
     line-height: 1.15;
     max-width: 650px;
     margin: 18px 0;
+    color: #fff;
+}
+
+.hero-content h1 span {
+    color: var(--primary-red);
 }
 
 .hero-content p {
@@ -251,6 +256,7 @@ ul {
     margin: 0 0 28px 0;
     font-size: clamp(0.95rem, 1.3vw, 1.08rem);
     line-height: 1.65;
+    color: #ddd;
 }
 
 .hero-btns {
