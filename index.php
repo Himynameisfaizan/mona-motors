@@ -15,6 +15,7 @@ $banner_result = $conn->query($banner_query);
 $banner = $banner_result->fetch_assoc();
 $banner_bg = !empty($banner['banner_path']) ? $banner['banner_path'] : 'images/slider/slider-1.jpg';
 ?>
+
 <section class="hero-section" style="background-image: url('admin/<?= $banner_bg ?>');">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
@@ -22,8 +23,8 @@ $banner_bg = !empty($banner['banner_path']) ? $banner['banner_path'] : 'images/s
         <h1 class="fade-up delay-1">
             <?= !empty($banner['title']) ? html_entity_decode($banner['title']) : 'Premium Auto <br><span class="text-red">Motor Parts</span>' ?>
         </h1>
-        <p class="fade-up delay-2">
-            <?= !empty($banner['description']) ? htmlspecialchars($banner['description']) : 'Specializing in high-performance spare parts, AC compressors, and reliable automotive solutions designed for durability and efficiency.' ?>
+        <p class="fade-up delay-2" style="max-width: 560px; line-height: 1.6;">
+            <?= !empty($banner['description']) ? html_entity_decode($banner['description']) : 'Specializing in high-performance spare parts, AC compressors, and reliable automotive solutions designed for durability and efficiency.' ?>
         </p>
         <div class="hero-btns fade-up delay-3">
             <a href="contact" class="btn-primary btn-large">Contact Now</a>
@@ -48,39 +49,6 @@ $banner_bg = !empty($banner['banner_path']) ? $banner['banner_path'] : 'images/s
         <div class="icon"><img src="images/icon/icon-card/v-1/icon-2.png" alt="Spare Solutions"></div>
         <h3>Spare Solutions</h3>
         <p>Durable engine and mechanical components for a wide range of vehicle models.</p>
-    </div>
-</section>
-
-<!-- ================= [NEW STATIC] Trust Section 1: Why Choose Us ================= -->
-<section class="trust-section" style="background-color: #f9f9f9; padding: 60px 0; margin-top: 40px;">
-    <div class="container">
-        <div class="section-title text-center">
-            <span class="sub-title">Why Choose Mona Motors</span>
-            <h2>Setting the Standard in Auto Parts</h2>
-        </div>
-        <div class="row" style="display: flex; gap: 30px; text-align: center; margin-top: 30px;">
-            <div class="col"
-                style="flex: 1; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <i class="fa-solid fa-shield-halved" style="font-size: 40px; color: #e3000f; margin-bottom: 15px;"></i>
-                <h4>OEM Standard Quality</h4>
-                <p>Every part we supply meets or exceeds strict Original Equipment Manufacturer standards for ultimate
-                    safety.</p>
-            </div>
-            <div class="col"
-                style="flex: 1; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <i class="fa-solid fa-truck-fast" style="font-size: 40px; color: #e3000f; margin-bottom: 15px;"></i>
-                <h4>Express Dispatch</h4>
-                <p>We understand that a broken car means lost time. Our streamlined inventory ensures same-day dispatch
-                    on most orders.</p>
-            </div>
-            <div class="col"
-                style="flex: 1; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <i class="fa-solid fa-headset" style="font-size: 40px; color: #e3000f; margin-bottom: 15px;"></i>
-                <h4>Expert Support</h4>
-                <p>Not sure which part fits? Our experienced mechanics and parts specialists are here to guide you
-                    directly.</p>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -292,6 +260,39 @@ $about = $about_result->fetch_assoc();
                 </div>
             </div>
             <?php } } ?>
+        </div>
+    </div>
+</section>
+
+<!-- ================= [NEW STATIC] Trust Section 1: Why Choose Us ================= -->
+<section class="trust-section" style="background-color: #f9f9f9; padding: 60px 0; margin-top: 40px;">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="sub-title">Why Choose Mona Motors</span>
+            <h2>Setting the Standard in Auto Parts</h2>
+        </div>
+        <div class="row" style="display: flex; gap: 30px; text-align: center; margin-top: 30px;">
+            <div class="col"
+                style="flex: 1; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <i class="fa-solid fa-shield-halved" style="font-size: 40px; color: #e3000f; margin-bottom: 15px;"></i>
+                <h4>OEM Standard Quality</h4>
+                <p>Every part we supply meets or exceeds strict Original Equipment Manufacturer standards for ultimate
+                    safety.</p>
+            </div>
+            <div class="col"
+                style="flex: 1; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <i class="fa-solid fa-truck-fast" style="font-size: 40px; color: #e3000f; margin-bottom: 15px;"></i>
+                <h4>Express Dispatch</h4>
+                <p>We understand that a broken car means lost time. Our streamlined inventory ensures same-day dispatch
+                    on most orders.</p>
+            </div>
+            <div class="col"
+                style="flex: 1; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <i class="fa-solid fa-headset" style="font-size: 40px; color: #e3000f; margin-bottom: 15px;"></i>
+                <h4>Expert Support</h4>
+                <p>Not sure which part fits? Our experienced mechanics and parts specialists are here to guide you
+                    directly.</p>
+            </div>
         </div>
     </div>
 </section>
