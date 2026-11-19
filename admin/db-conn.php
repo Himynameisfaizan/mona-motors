@@ -14,7 +14,7 @@ if ($local) {
     $username = 'root';
     $password = '';
     $dbName = 'mona_motors';
-    $site = "http://localhost/projects/vtexport/mona_motors";
+    $site = "http://localhost/office_php_project/mona-motors";
 } else {
     $host = 'localhost';
     $username = 'u799879276_mona_motors';
