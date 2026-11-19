@@ -64,7 +64,7 @@ $total_pages = ceil($total_row['total'] / $limit);
             <img src="admin/<?= $gallery['image_path'] ?>" alt="<?= htmlspecialchars($gallery['image_name']) ?>">
             <div class="gallery-overlay">
                 <a href="admin/<?= $gallery['image_path'] ?>" data-fancybox="gallery" data-type="image"
-                    data-caption="<?= htmlspecialchars($gallery['image_name']) ?>" class="zoom-btn">
+                     class="zoom-btn">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
                 </a>
             </div>
