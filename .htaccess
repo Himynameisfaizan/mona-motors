@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /projects/mona-motors/
+RewriteBase /office_php_project/mona-motors/
 
 # 1. PEHLE SABHI ASSETS KO REWRITE HONE SE ROKO (CSS FIX YAHI SE HOGA)
 # Agar koi file (CSS, JS, Image) exist karti hai, toh usko uske original path se hi do
@@ -29,4 +29,4 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
 
 # 4. ERROR PAGE HANDLING
-ErrorDocument 404 /projects/mona-motors/404.php
+ErrorDocument 404 /office_php_project/mona-motors/404.php

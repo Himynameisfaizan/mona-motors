@@ -152,9 +152,9 @@ $about = $about_result->fetch_assoc();
         </div>
     </div>
 </section>
+
 <!-- ================= Dynamic Gallery Section ================= -->
 <!-- Fancybox v4 CSS -->
-
 <section class="gallery-section">
     <div class="container">
         <div class="section-title text-center">
@@ -176,9 +176,8 @@ $about = $about_result->fetch_assoc();
                 <img src="admin/<?= $gallery['image_path'] ?>" alt="<?= htmlspecialchars($gallery['image_name']) ?>">
 
                 <div class="gallery-overlay">
-                    <!-- Popup Trigger (data-type="image" added) -->
                     <a href="admin/<?= $gallery['image_path'] ?>" data-fancybox="gallery" data-type="image"
-                        data-caption="<?= htmlspecialchars($gallery['image_name']) ?>" class="zoom-btn">
+                         class="zoom-btn">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </a>
                 </div>
@@ -190,6 +189,9 @@ $about = $about_result->fetch_assoc();
             } 
             ?>
         </div>
+        <div class="text-center" style="margin-top: 40px;">
+        <a href="gallery" class="btn-primary">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
     </div>
 </section>
 
